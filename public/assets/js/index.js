@@ -33,6 +33,14 @@ const getNotes = () =>
     },
   });
 
+  const getSingleNote = (id) =>
+  fetch(`/api/notes/${id}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
 const saveNote = (note) =>
   fetch('/api/notes', {
     method: 'POST',
