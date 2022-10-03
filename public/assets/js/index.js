@@ -1,9 +1,11 @@
+// DOM Locations for application
 let noteTitle;
 let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
+// Set locations if you are at /notes
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
@@ -33,7 +35,7 @@ const getNotes = () =>
     },
   });
 
-  const getSingleNote = (id) =>
+const getSingleNote = (id) =>
   fetch(`/api/notes/${id}`, {
     method: 'GET',
     headers: {
